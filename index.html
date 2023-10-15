@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>this is my  - es6 calculator made by engineer abuzar rahman</h1>
+
+    <form onsubmit="doSum(event)">
+        first number: <input id="firstNum" type="number" required="" step="0.1">
+        <br>
+        second number: <input id="secondNum" type="number" required="" step="0.1">
+        <br>
+        <button>Sum</button>
+       
+    </form>
+
+    <h1 id="resultWindow"></h1>
+    <form onsubmit="doSubtract(event)">
+        first number1: <input id="firstNum1" type="number" required="" step="0.1">
+        <br>
+        second number2: <input id="secondNum2" type="number" required="" step="0.1">
+        <br>
+        <button>Subtract</button>
+       
+    </form>
+
+    <h2 id="resultWindow2"></h2>
+    <form onsubmit="domultiply(event)">
+        first number3: <input id="firstNum3" type="number" required="" step="0.1">
+        <br>
+        second number4: <input id="secondNum4" type="number" required="" step="0.1">
+        <br>
+        <button>multiply</button>
+       
+    </form>
+
+    <h3 id="resultWindow3"></h3>
+    <form onsubmit="dodivid(event)">
+        first number5: <input id="firstNum5" type="number" required="" step="0.1">
+        <br>
+        second number6: <input id="secondNum6" type="number" required="" step="0.1">
+        <br>
+        <button>divid</button>
+       
+    </form>
+
+    <h3 id="resultWindow4">the divid of 8 and 2 is 4</h3>
+
+
+    
+  
+
+
+    <script>
+        
+
+        function doSum(event) {
+
+            event.preventDefault();
+            let firstNumber = document.querySelector("#firstNum").value;
+            let secondNumber = document.querySelector("#secondNum").value;
+
+            console.log(firstNumber); // 5
+            console.log(secondNumber); // 6
+
+            let result = Number(firstNumber) + Number(secondNumber);
+
+            // es6 string templates
+            let message = `the sum of ${firstNumber} and ${secondNumber} is ${result}`
+
+            document.querySelector("#resultWindow").innerHTML = message
+
+        }
+        
+        function doSubtract(event) {
+
+event.preventDefault();
+let firstNumber1 = document.querySelector("#firstNum1").value;
+let secondNumber2 = document.querySelector("#secondNum2").value;
+
+console.log(firstNumber1); 
+console.log(secondNumber2); 
+
+let result = Number(firstNumber1) - Number(secondNumber2);
+
+// es6 string templates
+let message = `the subtract of ${firstNumber1} and ${secondNumber2} is ${result}`
+
+document.querySelector("#resultWindow2").innerHTML = message
+
+}
+function domultiply(event) {
+
+event.preventDefault();
+let firstNumber3 = document.querySelector("#firstNum3").value;
+let secondNumber4 = document.querySelector("#secondNum4").value;
+
+console.log(firstNumber3); // 5
+console.log(secondNumber4); // 6
+
+let result = Number(firstNumber3) * Number(secondNumber4);
+
+// es6 string templates
+let message = `the multiplication of ${firstNumber3} and ${secondNumber4} is ${result}`
+
+document.querySelector("#resultWindow3").innerHTML = message
+
+}
+function dodivid(event) {
+
+event.preventDefault();
+let firstNumber5 = document.querySelector("#firstNum5").value;
+let secondNumber6 = document.querySelector("#secondNum6").value;
+
+console.log(firstNumber5); // 5
+console.log(secondNumber6); // 6
+
+let result = Number(firstNumber5) / Number(secondNumber6);
+
+// es6 string templates
+let message = `the divid of ${firstNumber5} and ${secondNumber6} is ${result}`
+
+document.querySelector("#resultWindow4").innerHTML = message
+
+}
+
+    </script>
+
+
+</body></html>
